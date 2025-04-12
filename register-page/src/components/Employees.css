@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9fb;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 220px;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar .search-box {
+    padding: 8px 12px;
+    border-radius: 17px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .section {
+    font-size: 13px;
+    margin: 15px 0 5px;
+    color: #888;
+  }
+  
+  .sidebar a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  
+  .sidebar a:hover {
+    color: #6b21a8;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #f4f4f7;
+  }
+  
+  .header h2 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .filters select,
+  .filters input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 17px;
+    font-size: 14px;
+  }
+  
+  .candidates-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  .candidates-table thead {
+    background-color: #6b21a8;
+    color: white;
+    text-align: left;
+  }
+  
+  .candidates-table th,
+  .candidates-table td {
+    padding: 16px 12px;
+    font-size: 14px;
+  }
+  
+  .candidates-table td img.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .dropdown-menu button {
+    background: none;
+    border: none;
+    color: #6b21a8;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .dropdown-menu button:hover {
+    text-decoration: underline;
+  }
+  .action-cell {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 6px 0;
+    z-index: 1;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    min-width: 100px;
+  }
+  
+  .dropdown-menu button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu button:hover {
+    background-color: #f2f2f2;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 650px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal h3 {
+    color: #4B0082;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .form-grid input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .save-btn {
+    background-color: #4B0082;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .cancel-btn {
+    background-color: #ddd;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  

@@ -1,0 +1,89 @@
+.register-container, .login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  height: 100vh;
+}
+
+.register-box {
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.register-left {
+  flex: 1;
+  background: #4b0082;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-left img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.register-left h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.register-left p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.register-right {
+  flex: 1;
+  background: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-right h2 {
+  margin-bottom: 20px;
+}
+
+.register-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.register-right input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.register-right button {
+  padding: 10px;
+  background-color: #4b0082;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.register-right button:hover {
+  background-color: #3a006a;
+}
+
+.register-right p {
+  margin-top: 10px;
+  font-size: 14px;
+}
