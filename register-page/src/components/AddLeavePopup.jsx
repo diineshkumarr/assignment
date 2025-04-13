@@ -20,7 +20,7 @@ const AddLeavePopup = ({ onClose, onAdd }) => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/candidates');
+        const res = await axios.get('https://assignment-2-frontend.onrender.com/api/candidates');
         setEmployees(res.data);
       } catch (err) {
         console.error('Error fetching employees:', err);
@@ -61,7 +61,7 @@ const AddLeavePopup = ({ onClose, onAdd }) => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/leaves', formData);
+      const res = await axios.post('https://assignment-2-frontend.onrender.com/api/leaves', formData);
       onAdd(res.data);
       onClose();
     } catch (error) {
