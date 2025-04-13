@@ -64,12 +64,12 @@ const CandidateModal = ({ onClose, onSave, candidate }) => {
 
     try {
       if (candidate) {
-        await axios.put(`http://localhost:5000/api/candidates/${candidate._id}`, payload, {
+        await axios.put(`https://assignment-2-frontend.onrender.com/api/candidates/${candidate._id}`, payload, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
         alert('Candidate updated successfully!');
       } else {
-        await axios.post('http://localhost:5000/api/candidates', payload, {
+        await axios.post('https://assignment-2-frontend.onrender.com/api/candidates', payload, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
         alert('Candidate added successfully!');
