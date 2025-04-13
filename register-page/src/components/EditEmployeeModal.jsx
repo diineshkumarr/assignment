@@ -33,7 +33,7 @@ const EditEmployeeModal = ({ candidate, onClose, onSave }) => {
   const handleSubmit = async () => {
     try {
       const updatedPosition = `${formData.department} ${formData.position}`;
-      await fetch(`http://localhost:5000/api/candidates/${candidate._id}`, {
+      await fetch(`https://assignment-2-frontend.onrender.com/api/candidates/${candidate._id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
