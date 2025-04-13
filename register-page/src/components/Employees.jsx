@@ -29,7 +29,7 @@ const Employees = () => {
   const handleDelete = async (id) => {
     console.log('Attempting to delete candidate with ID:', id);
     try {
-      const res = await axios.delete(`http://localhost:5000/api/candidates/${id}`);
+      const res = await axios.delete(`https://assignment-2-frontend.onrender.com/api/candidates/${id}`);
       console.log('Delete response:', res.data);
       alert('Candidate deleted successfully');
       fetchEmployees();
@@ -41,7 +41,7 @@ const Employees = () => {
 
   const fetchEmployees = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/candidates');
+      const res = await axios.get('https://assignment-2-frontend.onrender.com/api/candidates');
       setEmployees(res.data);
     } catch (err) {
       console.error('Failed to fetch employees:', err);
