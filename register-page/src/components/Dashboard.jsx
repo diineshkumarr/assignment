@@ -16,12 +16,12 @@ const Dashboard = () => {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => {
     setIsModalOpen(false);
-    setSelectedCandidate(null); // Reset selected candidate on modal close
+    setSelectedCandidate(null); 
   };
 
   const fetchCandidates = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/candidates');
+      const res = await axios.get('https://assignment-2-frontend.onrender.com/api/candidates');
       setCandidates(res.data);
     } catch (err) {
       console.error('Failed to fetch candidates:', err);
@@ -39,7 +39,7 @@ const Dashboard = () => {
 
   const handleStatusChange = async (id, newStatus) => {
     try {
-      await axios.put(`http://localhost:5000/api/candidates/${id}`, {
+      await axios.put(`https://assignment-2-frontend.onrender.com/api/candidates/${id}`, {
         status: newStatus,
       });
       fetchCandidates();
@@ -56,7 +56,7 @@ const Dashboard = () => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:5000/api/candidates/${id}`);
+      const res = await axios.delete(`https://assignment-2-frontend.onrender.com/api/candidates/${id}`);
       alert('Candidate deleted successfully');
       fetchCandidates(); // Refresh list
     } catch (err) {
