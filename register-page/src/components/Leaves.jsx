@@ -30,7 +30,7 @@ const Leaves = () => {
 
   const fetchLeavesFromBackend = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/leaves');
+      const res = await axios.get('https://assignment-2-frontend.onrender.com/api/leaves');
       setLeaves(res.data);
       localStorage.setItem('leaves', JSON.stringify(res.data)); 
     } catch (err) {
