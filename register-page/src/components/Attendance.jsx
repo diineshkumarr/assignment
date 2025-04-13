@@ -9,7 +9,7 @@ const Attendance = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/candidates');
+        const res = await axios.get('https://assignment-2-frontend.onrender.com/api/candidates');
         setEmployees(res.data);
       } catch (err) {
         console.error('Error fetching attendance data:', err);
@@ -22,7 +22,7 @@ const Attendance = () => {
   const handleStatusChange = async (id, newStatus) => {
     try {
       // Optional: Update on backend
-      await axios.put(`http://localhost:5000/api/candidates/${id}`, {
+      await axios.put(`https://assignment-2-frontend.onrender.com/api/candidates/${id}`, {
         status: newStatus,
       });
 
