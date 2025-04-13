@@ -35,6 +35,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/candidates', require('./routes/candidates'));
 app.use('/api', attendanceRoute);
